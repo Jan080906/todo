@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'name']
-    name = serializers.CharField(max_length=150, source='username')
+    name = serializers.CharField(max_length=150, source='first_name')
 
 class TaskSerializer(serializers.ModelSerializer):
     class Meta:
