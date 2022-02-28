@@ -22,7 +22,7 @@ class TaskCreateInputSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         task = Task(**validated_data)
-        task.user_id = 1
+        task.user_id = self.context['user_id']
         task.last_updated = datetime.utcnow()
         task.save()
         return task

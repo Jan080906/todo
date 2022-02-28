@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 
 # Create your models here
 class Task(models.Model):
-    STATUS_TO_DO = 'to_do'
-    STATUS_IN_PROGRESS = 'in_progress'
-    STATUS_DONE = 'done'
+    STATUS_TO_DO = 'Todo'
+    STATUS_IN_PROGRESS = 'Inprogress'
+    STATUS_DONE = 'Done'
 
     STATUS_CHOICES = [
         (STATUS_TO_DO,'To do'),
